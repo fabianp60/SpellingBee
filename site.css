@@ -36,7 +36,7 @@ body {
 /* card text-bg-primary px-2 py-2 d-flex flex-row align-items-center */
 .word-btn {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
     padding: .5rem;
     cursor: pointer;
