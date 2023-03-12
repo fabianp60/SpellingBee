@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+#loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#loading div.load-info {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+#loading.hide {
+    display: none;
+}
+
+/* card text-bg-primary px-2 py-2 d-flex flex-row align-items-center */
+.word-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+#big-word-btn {
+    font-size: 8em;
+}
+
+#word-letters button {
+    font-size: 4em!important;
+    width: 6rem;
+}
+
+.word-letters-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
