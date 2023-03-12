@@ -8,12 +8,12 @@
 }
 
 #big-word-btn {
-    font-size: 8em;
+    font-size: 5rem;
 }
 
 #word-letters button {
-    font-size: 4em!important;
-    width: 6rem;
+    font-size: 2rem!important;
+    width: 4rem;
 }
 
 .word-letters-cont {

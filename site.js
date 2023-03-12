@@ -53,7 +53,7 @@ function createWordButton(word) {
     const template = `
         <div class="col-12 col-md-2 mb-2">
             <div class="word-btn card text-bg-primary" data-word="${word}">
-                <h5>${word}</h5>
+                <span>${word}</span>
             </div>
         </div>`;
     const divObj = document.createElement("div");
