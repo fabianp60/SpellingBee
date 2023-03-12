@@ -14,12 +14,8 @@ bigWordButton.addEventListener("click", onBigWordButtonClick);
 function runProgram() {
     preloadSounds();
     showWordsUI();
-    hideLoading();
 }
 
-function hideLoading() {
-    document.getElementById("loading").classList.add("hide");
-}
 
 function preloadSounds() {
     for (const letter of alphabetList) {
