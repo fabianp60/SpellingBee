@@ -1,3 +1,11 @@
+.game-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    padding: 1rem;
+}
+
 /* card text-bg-primary px-2 py-2 d-flex flex-row align-items-center */
 .word-btn {
     display: flex;
@@ -21,4 +29,90 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#practice-board {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#practice-board div.header-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.header-buttons div {
+    width: 130px;
+    max-width: 130px;
+}
+
+#amounts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cus-input-box {
+    background-color: #fff;
+    border: 2px solid #d2d2d2;
+    border-radius: .5rem;
+    min-width: 50px;
+    min-height: 50px;
+    margin-top: 1rem;
+    padding: .5rem;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cus-input-box span.letter-btn {
+    background-color: blueviolet;
+    width: 3rem;
+    height: 3rem;
+    margin-left: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    border-bottom: 2px solid black;
+}
+
+#pc-word {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-ctrl {
+    display: flex;
+    min-width: 54px;
+}
+
+.user-controls {
+    margin-top: 1rem;
+    display: flex;
+}
+
+.user-controls .letter-btns {
+    flex-grow: 1;
+}
+
+.user-controls .ctrl-btns {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-controls .ctrl-btns button {
+    margin-bottom: .5rem;
+}
+
+#usr-letter-btns {
+    padding-right: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: .5rem;
 }
