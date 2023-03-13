@@ -1,4 +1,5 @@
 const divUsrLetterBtns = document.getElementById('usr-letter-btns');
+const divPcWord = document.getElementById('pc-word');
 let wordsQueue = [];
 let currentWord = "";
 
@@ -59,4 +60,6 @@ function shuffle(array) {
 function nextWord() {
     currentWord = wordsQueue.shift();
     console.log(currentWord);
+    removeAllChilds(divPcWord);
+    // <span class="letter-btn">H</span>
 }
