@@ -11,7 +11,6 @@ function runProgram() {
 }
 
 function showWordsUI() {
-    // const MaxWordLength = wordList.map(word => word.length).reduce((prev, cur) => (cur > prev ? cur : prev ));
     for (const word of wordList) {
         let wordBtn = createWordButton(word);
         boardContainer.appendChild(wordBtn);
@@ -22,7 +21,7 @@ function showWordsUI() {
 function createWordButton(word) {
     const template = `
         <div class="col-12 col-md-2 mb-2">
-            <div class="word-btn card text-bg-success" data-word="${word}">
+            <div class="word-btn card text-bg-success font-monospace" data-word="${word}">
                 <span>${word}</span>
             </div>
         </div>`;
@@ -60,7 +59,7 @@ function loadLettersFromWord(word) {
 
 function getLetterButton(letter) {
     const template = `
-        <button type="button" class="btn btn-primary m-2" data-letter="${letter}">${letter}</button>`;
+        <button type="button" class="btn btn-primary m-2 font-monospace" data-letter="${letter}">${letter}</button>`;
     const divObj = document.createElement("div");
     divObj.innerHTML = template;
     return divObj.firstElementChild;

@@ -23,7 +23,7 @@
           <div id="practice-board">
             <div class="header-buttons p-2 shadow flex-column flex-sm-row">
                 <div class="d-grid mb-2 mb-sm-0">
-                    <button type="button" class="btn btn-warning">
+                    <button type="button" class="btn btn-warning" id="next-word-button">
                       <i class="bi bi-fast-forward-circle-fill"></i>
                       Next Word
                     </button>
@@ -44,35 +44,27 @@
 
             <div class="cus-input-box font-monospace flex-column flex-sm-row">
                 <div class="btn-ctrl mb-2 mb-sm-0">
-                    <button type="button" class="btn btn-primary btn-lg">
+                    <button id="pc-word-sound" type="button" class="btn btn-primary btn-lg" data-word="">
                         <i class="bi bi-volume-up-fill"></i>
                     </button>
                 </div>
                 <div id="pc-word">
-                    <span class="letter-btn">H</span>
-                    <span class="letter-btn">o</span>
-                    <span class="letter-btn">l</span>
-                    <span class="letter-btn">a</span>
                 </div>
                 <div class="btn-ctrl"></div>
             </div>
 
             <div class="cus-input-box font-monospace" id="user-word">
-                <span class="letter-btn">H</span>
-                <span class="letter-btn">o</span>
-                <span class="letter-btn">l</span>
-                <span class="letter-btn">a</span>
             </div>
 
             <div class="user-controls">
                 <div class="letter-btns font-monospace" id="usr-letter-btns">
                 </div>
                 <div class="ctrl-btns">
-                    <button type="button" class="btn btn-danger btn-lg">
-                        <i id="backspace-btn" class="bi bi-backspace-fill"></i>
+                    <button id="backspace-btn" type="button" class="btn btn-danger btn-lg">
+                        <i class="bi bi-backspace-fill"></i>
                     </button>
-                    <button type="button" class="btn btn-success btn-lg">
-                        <i id="send-btn" class="bi bi-send-fill"></i>
+                    <button id="send-btn" type="button" class="btn btn-success btn-lg">
+                        <i class="bi bi-send-fill"></i>
                     </button>
                 </div>
             </div>
@@ -81,6 +73,8 @@
         </div>
       </div>
     </div>
+
+    Sound Effect from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=6912">Pixabay</a>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"

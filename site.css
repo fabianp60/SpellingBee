@@ -80,6 +80,10 @@ div.header-buttons div {
     border-bottom: 2px solid black;
 }
 
+.clickable {
+    cursor: pointer;
+}
+
 #pc-word {
     display: flex;
     justify-content: center;
