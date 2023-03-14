@@ -63,3 +63,18 @@ function nextWord() {
     removeAllChilds(divPcWord);
     // <span class="letter-btn">H</span>
 }
+
+function createLetterBlock(letter) {
+    const template = `
+        <span class="letter-btn" data-letter="${letter}">${letter}</span>`;
+    const divObj = document.createElement("div");
+    divObj.innerHTML = template;
+    return divObj.firstElementChild;
+}
+
+function showPcWordBlocks(word) {
+    for (let index = 0; index < word.length; index++) {
+        createLetterBlock('');    
+    }
+    
+}
