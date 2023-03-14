@@ -59,9 +59,8 @@ function shuffle(array) {
 
 function nextWord() {
     currentWord = wordsQueue.shift();
-    console.log(currentWord);
     removeAllChilds(divPcWord);
-    // <span class="letter-btn">H</span>
+    showPcWordBlocks(currentWord);
 }
 
 function createLetterBlock(letter) {
@@ -73,8 +72,7 @@ function createLetterBlock(letter) {
 }
 
 function showPcWordBlocks(word) {
-    for (let index = 0; index < word.length; index++) {
-        createLetterBlock('');    
+    for (const letter of word) {
+        divPcWord.appendChild(createLetterBlock(''));
     }
-    
 }
