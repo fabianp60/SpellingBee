@@ -80,7 +80,17 @@ div.header-buttons div {
     border-bottom: 2px solid black;
 }
 
-.clickable {
+span.win {
+    background-color:chartreuse ;
+    color: #fff;
+}
+
+span.lose {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+span.clickable {
     cursor: pointer;
 }
 

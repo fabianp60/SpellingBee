@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", runProgram);
 
 function runProgram() {
     preloadSounds();
+    preloadSoundfEffects();
     randomizeWordQueue();
     loadAlphabetbuttons();
     addControlButtonEvents();
@@ -100,19 +101,24 @@ function nextWord() {
     showPcWordBlocks(currentPcWord);
     btnPcWordSound.dataset["word"] = currentPcWord;
     wordSounds[currentPcWord].play();
+    btnSendAnswer.disabled = false;
+    btnBackSpace.disabled = false;
 }
 
-function createLetterBlock(letter, clickable) {
+function createLetterBlock(letter, clickable, type = '') {
     const template = `
-        <span class="letter-btn ${clickable}" data-letter="${letter}">${letter}</span>`;
+        <span class="letter-btn ${clickable} ${type}" data-letter="${letter}">${letter}</span>`;
     const divObj = document.createElement("div");
     divObj.innerHTML = template;
     return divObj.firstElementChild;
 }
 
-function showPcWordBlocks(word) {
+function showPcWordBlocks(word, showletter = false, type) {
     for (const letter of word) {
-        divPcWord.appendChild(createLetterBlock('',''));
+        if(showletter)
+            divPcWord.appendChild(createLetterBlock(letter,'', type));
+        else
+            divPcWord.appendChild(createLetterBlock('',''));
     }
 }
 
@@ -129,6 +135,7 @@ function onBtnPcWordSound(evt) {
 }
 
 function onBtnBackSpaceClick(evt) {
+    effectSounds['backspacetap'].play();
     if(divUserWord.lastChild) divUserWord.removeChild(divUserWord.lastChild);
     if(currentUserWord.length > 0) {
         currentUserWord = currentUserWord.substring(0,currentUserWord.length - 1);
@@ -136,11 +143,22 @@ function onBtnBackSpaceClick(evt) {
 }
 
 function onBtnSendAnswerClick(evt) {
+    btnSendAnswer.disabled = true;
+    btnBackSpace.disabled = true;
+    let result = "win";
     if(currentPcWord == currentUserWord) {
+        effectSounds['win'].play();
         totalPoints++;
         inputPoints.value = totalPoints.toString();
     } else {
-        alert('fallaste');
+        result = 'lose';
+        effectSounds['lose'].play();
     }
+    showPcWord(result);
+}
+
+function showPcWord(result) {
+    removeAllChilds(divPcWord);
+    showPcWordBlocks(currentPcWord, true, result);
 }
 
