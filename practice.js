@@ -103,6 +103,8 @@ function nextWord() {
     wordSounds[currentPcWord].play();
     btnSendAnswer.disabled = false;
     btnBackSpace.disabled = false;
+    btnNextPcWord.disabled = true;
+    setDisabledAlphabetKeyButtons(false);
 }
 
 function createLetterBlock(letter, clickable, type = '') {
@@ -155,10 +157,20 @@ function onBtnSendAnswerClick(evt) {
         effectSounds['lose'].play();
     }
     showPcWord(result);
+    setDisabledAlphabetKeyButtons(true);
+    btnNextPcWord.disabled = false;
 }
 
 function showPcWord(result) {
     removeAllChilds(divPcWord);
     showPcWordBlocks(currentPcWord, true, result);
 }
+
+function setDisabledAlphabetKeyButtons(isDisabled = false) {
+    const buttons = divUsrLetterBtns.querySelectorAll('button');
+    buttons.forEach(letter_button => {
+        letter_button.disabled = isDisabled; 
+    });
+}
+
 

@@ -80,12 +80,12 @@ div.header-buttons div {
     border-bottom: 2px solid black;
 }
 
-span.win {
+.cus-input-box span.letter-btn.win {
     background-color:chartreuse ;
     color: #fff;
 }
 
-span.lose {
+.cus-input-box span.letter-btn.lose {
     background-color: #dc3545;
     color: #fff;
 }
