@@ -8,11 +8,14 @@ const alphabetSounds = {};
 const wordSounds = {};
 const effectSounds = {};
 
-function preloadSounds() {
+function preloadAlphabetSounds() {
     for (const letter of alphabetList) {
         let filepath = `${alphabetPath}/${letter}.mp3`;
         alphabetSounds[letter] = preloadSound(filepath);
     }
+}
+
+function preloadWordSounds() {
     for (const word of wordList) {
         let filepath = `${wordsPath}/${word}.mp3`;
         wordSounds[word] = preloadSound(filepath);

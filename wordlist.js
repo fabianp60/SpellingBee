@@ -6,7 +6,8 @@ document.addEventListener("DOMContentLoaded", runProgram);
 bigWordButton.addEventListener("click", onBigWordButtonClick);
 
 function runProgram() {
-    preloadSounds();
+    preloadAlphabetSounds();
+    preloadWordSounds();
     showWordsUI();
 }
 

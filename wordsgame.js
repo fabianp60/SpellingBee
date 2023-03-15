@@ -17,7 +17,8 @@ let totalPoints = 0;
 document.addEventListener("DOMContentLoaded", runProgram);
 
 function runProgram() {
-    preloadSounds();
+    preloadAlphabetSounds();
+    preloadWordSounds();
     preloadSoundfEffects();
     randomizeWordQueue();
     loadAlphabetbuttons();
